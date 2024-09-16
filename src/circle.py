@@ -1,8 +1,8 @@
 
 import math
-from square import Square
+from figure import Figure
 
-class Circle(Square):
+class Circle(Figure):
     def __init__(self, radius):
         if radius <= 0:
             raise ValueError("Радиус круга должен быть положительным числом.")

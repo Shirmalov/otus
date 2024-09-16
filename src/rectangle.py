@@ -1,7 +1,7 @@
 
-from triangle import Triangle
+from figure import Figure
 
-class Rectangle(Triangle):
+class Rectangle(Figure):
     def __init__(self, width, height):
         if width <= 0 or height <= 0:
             raise ValueError("Ширина и высота должны быть положительными числами.")
