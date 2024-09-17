@@ -2,6 +2,7 @@
 import math
 from figure import Figure
 
+
 class Circle(Figure):
     def __init__(self, radius):
         if radius <= 0:
@@ -14,6 +15,6 @@ class Circle(Figure):
     def get_perimeter(self):
         return 2 * math.pi * self.radius
 
-circle = Circle(4)
-print("Площадь круга:", circle.get_area())
-print("Периметр круга:", circle.get_perimeter())
+# circle = Circle(4)
+# print("Площадь круга:", circle.get_area())
+# print("Периметр круга:", circle.get_perimeter())

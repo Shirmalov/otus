@@ -2,6 +2,7 @@
 import math
 from figure import Figure
 
+
 class Triangle(Figure):
     def __init__(self, side_a, side_b, side_c):
         if side_a + side_b <= side_c or side_a + side_c <= side_b or side_b + side_c <= side_a:
@@ -18,6 +19,6 @@ class Triangle(Figure):
         return self.side_a + self.side_b + self.side_c
 
 
-triangle = Triangle(7, 4, 9)
-print("Площадь треугольника:", triangle.get_area())
-print("Периметр треугольника:", triangle.get_perimeter())
+# triangle = Triangle(7, 4, 9)
+# print("Площадь треугольника:", triangle.get_area())
+# print("Периметр треугольника:", triangle.get_perimeter())
