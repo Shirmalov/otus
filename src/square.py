@@ -4,6 +4,8 @@ from figure import Figure
 
 class Square(Figure):
     def __init__(self, side):
+        if not isinstance(side, (int, float)):
+            raise ValueError("Сторона квадрата должна быть числом.")
         if side <= 0:
             raise ValueError("Сторона квадрата должна быть положительным числом.")
         self.side = side

@@ -5,6 +5,8 @@ from figure import Figure
 
 class Circle(Figure):
     def __init__(self, radius):
+        if not isinstance(radius, (int, float)):
+            raise ValueError("Радиус круга должен быть числом.")
         if radius <= 0:
             raise ValueError("Радиус круга должен быть положительным числом.")
         self.radius = radius
