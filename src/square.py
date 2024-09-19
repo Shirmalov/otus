@@ -1,8 +1,11 @@
 
-from rectangle import Rectangle
+from figure import Figure
 
-class Square(Rectangle):
+
+class Square(Figure):
     def __init__(self, side):
+        if not isinstance(side, (int, float)):
+            raise ValueError("Сторона квадрата должна быть числом.")
         if side <= 0:
             raise ValueError("Сторона квадрата должна быть положительным числом.")
         self.side = side
@@ -13,6 +16,6 @@ class Square(Rectangle):
     def get_perimeter(self):
         return 4 * self.side
 
-square = Square(4)
-print("Площадь квадрата:", square.get_area())
-print("Периметр квадрата:", square.get_perimeter())
+# square = Square(4)
+# print("Площадь квадрата:", square.get_area())
+# print("Периметр квадрата:", square.get_perimeter())

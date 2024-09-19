@@ -2,8 +2,11 @@
 import math
 from figure import Figure
 
+
 class Triangle(Figure):
     def __init__(self, side_a, side_b, side_c):
+        if side_a <= 0 or side_b <= 0 or side_c <= 0:
+            raise ValueError("Стороны треугольника должны быть положительными.")
         if side_a + side_b <= side_c or side_a + side_c <= side_b or side_b + side_c <= side_a:
             raise ValueError("С указанными сторонами треугольник создать нельзя.")
         self.side_a = side_a
@@ -18,6 +21,6 @@ class Triangle(Figure):
         return self.side_a + self.side_b + self.side_c
 
 
-triangle = Triangle(7, 4, 9)
-print("Площадь треугольника:", triangle.get_area())
-print("Периметр треугольника:", triangle.get_perimeter())
+# triangle = Triangle(7, 4, 9)
+# print("Площадь треугольника:", triangle.get_area())
+# print("Периметр треугольника:", triangle.get_perimeter())

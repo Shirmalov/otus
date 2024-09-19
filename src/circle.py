@@ -2,8 +2,11 @@
 import math
 from figure import Figure
 
+
 class Circle(Figure):
     def __init__(self, radius):
+        if not isinstance(radius, (int, float)):
+            raise ValueError("Радиус круга должен быть числом.")
         if radius <= 0:
             raise ValueError("Радиус круга должен быть положительным числом.")
         self.radius = radius
@@ -14,6 +17,6 @@ class Circle(Figure):
     def get_perimeter(self):
         return 2 * math.pi * self.radius
 
-circle = Circle(4)
-print("Площадь круга:", circle.get_area())
-print("Периметр круга:", circle.get_perimeter())
+# circle = Circle(4)
+# print("Площадь круга:", circle.get_area())
+# print("Периметр круга:", circle.get_perimeter())
